@@ -16,7 +16,7 @@ class DestinationsContainer extends React.Component {
         return (
             <div>
                 <DestinationList />
-                <Destinations />
+                <Destinations destinations={this.props.destinations} />
             </div>
         )
     }
