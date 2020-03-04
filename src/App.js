@@ -1,15 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+
+class App extends React.Component {
+  componentDidMount() {
+    fetch("http://localhost:3000/api/v1/destinations/1", {
+     
+       method: "GET",
+       headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+       
+     })
+     .then(r => r.json())
+     .then(data => console.log(data))
+    
+
+   
+
+  }
+
+  render() {
   return (
     <div className="App">
-     
-        <img src={logo} className="App-logo" alt="logo" />
-      
+       This is a React App!
     </div>
   );
+}
 }
 
 export default App;
