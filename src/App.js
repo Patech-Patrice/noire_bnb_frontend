@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {fetchDestinations} from './actions/fetchDestinations';
+//import {fetchDestinations} from './actions/fetchDestinations';
+import DestinationsContainer from './containers/DestinationsContainer'
+
+
+//router will live in this file
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+//navbar renders here
+//home component renders here(it renders search, destinations, attractions)
 
 
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.fetchDestinations({type: 'FETCH_DESTINATIONS', payload: {name: 'Destinations'}})
+    //this.props.fetchDestinations({type: 'FETCH_DESTINATIONS', payload: {name: 'Destinations'}})
     //fetch("http://localhost:3000/api/v1/destinations", {
       // method: "GET",
        //headers : { 
@@ -21,7 +28,11 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-       This is a React App!
+       <DestinationsContainer />
+       <Router>
+         <Route />
+         <Route />
+       </Router>
     </div>
   );
 }
@@ -40,4 +51,7 @@ class App extends React.Component {
   //}
 //}
 
-export default connect(null, {fetchDestinations})(App);
+//export default connect(null, {fetchDestinations})(App);
+//export default connect()(App);
+export default App;
+
