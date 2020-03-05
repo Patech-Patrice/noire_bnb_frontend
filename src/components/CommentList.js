@@ -1,15 +1,14 @@
 import React from 'react';
 
 
-class DestinationList extends React.Component {
+class CommentList extends React.Component {
     render() {
         return (
-      
             <div >
-               Destination List
+               Commment List
                     </div>                   
         )
     }
 }
 
-export default DestinationList;
+export default CommentList;
