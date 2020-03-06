@@ -1,35 +1,26 @@
-import React from 'react'
-import {Redirect} from 'react-router-dom'
+import React , { Component }from 'react';
+//import {Route, Link} from 'react-router-dom'
+//import Destination from './Destination'
 
+//props creates an object of all destinations to be passed in an argument
+//responsible for rendering a list of destinations
 
-import DestinationsContainer from '../containers/DestinationsContainer'
 
 const Destination = (props) => {
+   console.log(props.destination)
+    return(
+        <div>
+        <form >
+            <input placeholder="search destination">
+            </input>
+            <button type="search">Search Destination</button>
+        </form>
+       
 
-  console.log(props)
-  
-  //let destination = [];
+        </div>
+    )}
+    Destination.getInitialProps = async () => {
+        console.log('get initialprops');
+    };
 
-  //console.log(destination)
-  return (
-
-    <div>
-      <h2>
-        {destination ? destination.city : null} - {destination ? destination.state : null} - {destination ? destination.country : null}
-      </h2>
-      <DestinationsContainer destination={destination}/><br/>
-      
-    </div>
-  )
-
-
-}
-
-export default Destination
-
-
- 
-
-  
-   
-  
+    export default Destination;

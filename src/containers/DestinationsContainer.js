@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchDestinations} from '../actions/fetchDestinations';
-import Destinations from '../components/Destinations.js';
+import Destination from '../components/Destination.js';
 //import Destination from '../components/Destination.js';
 import DestinationList from '../components/DestinationList.js';
 class DestinationsContainer extends React.Component {
@@ -16,12 +16,12 @@ class DestinationsContainer extends React.Component {
         
     }
     render() {
-        if (this.props.destinations) {
+        if (this.props.destination) {
         return (
             <div>
                 <h1>Destinations will go here</h1>
                 <DestinationList  />
-                <Destinations destinations ={this.props.destinations} />
+                <Destination destination ={this.props.destination} />
             </div>
              )}
              else {
@@ -37,7 +37,7 @@ class DestinationsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-      destinations: state.destination 
+      destination: state.destination 
     }
   }
 
