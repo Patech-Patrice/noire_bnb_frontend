@@ -1,7 +1,13 @@
+
+
+
 export default function destinationReducer(state = {destinations: []}, action) {
+  //debugger;
     switch (action.type) {
-        case "FETCH_DESTINATIONS":
-        return {destinations: action.payload}
+        case 'FETCH_DESTINATIONS':
+          console.log(action.payload)
+          //debugger;
+          return  action.payload
           //return state
         default:
           return state
@@ -9,4 +15,6 @@ export default function destinationReducer(state = {destinations: []}, action) {
     }
 
 
-
+  //return {
+         // destinations: action.payload}
+          //return state

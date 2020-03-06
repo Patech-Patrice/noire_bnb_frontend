@@ -7,6 +7,10 @@ import destinationReducer from './reducers/destinationReducer.js';
 import attractionReducer from './reducers/attractionReducer.js';
 import commentReducer from './reducers/commentReducer.js';
 
+//import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 import App from './App';
 

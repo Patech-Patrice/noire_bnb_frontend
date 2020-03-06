@@ -16,6 +16,7 @@ class AttractionsContainer extends React.Component {
             <div>
                 <AttractionList />
                 <Attractions attractions={this.props.attractions} />
+               
             </div>
         )
     }

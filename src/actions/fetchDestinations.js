@@ -1,17 +1,16 @@
 export function fetchDestinations() {
+ 
     return(dispatch) => {
-    fetch("http://localhost:3000/api/v1/destinations", {
-       method: "GET",
-       headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-     })
-     .then(r => r.json())
-     .then(data => dispatch({
+    fetch("http://localhost:3000/api/v1/destinations")
+     .then(resp => resp.json())
+     .then(destinations => dispatch({
         type: 'FETCH_DESTINATIONS',
-        payload: data    
+        payload: destinations    
      }))
-    }
+     .catch(error => console.log(error))
+   }
 }
+    
+   
+
 

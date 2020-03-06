@@ -13,30 +13,33 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 class App extends React.Component {
+ 
   componentDidMount() {
     //this.props.fetchDestinations({type: 'FETCH_DESTINATIONS', payload: {name: 'Destinations'}})
-    fetch("http://localhost:3000/api/v1/attractions", {
-       method: "GET",
-       headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-     })
-     .then(r => r.json())
-     .then(data => console.log(data))
+    //fetch("http://localhost:3000/api/v1/destinations", {
+      // method: "GET",
+       //headers : { 
+        //'Content-Type': 'application/json',
+        //'Accept': 'application/json'
+      // }
+     //})
+     //.then(r => r.json())
+     //.then(data => console.log(data))
+
   }
 
   render() {
   return (
     <div className="App">
-       <DestinationsContainer />
-       <AttractionsContainer />
-       <CommentsContainer />
 
-       <Router>
-         <Route />
-         <Route />
+       
+        <Router>
+    
+       <DestinationsContainer destinations={this.props.destinations} />
+       <Route exact path='/' component={AttractionsContainer}/>
+       <Route exact path='/' component={CommentsContainer}/>
        </Router>
+      
     </div>
   );
 }
