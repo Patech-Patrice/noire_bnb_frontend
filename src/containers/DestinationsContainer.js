@@ -21,13 +21,12 @@ class DestinationsContainer extends React.Component {
             <div>
                 <h1>Destinations will go here</h1>
                 <DestinationList  />
+             
                 <Destination destination ={this.props.destination} />
             </div>
              )}
              else {
-
               return (
-
             <div> Loading</div> 
              )
               }

@@ -8,6 +8,7 @@ import React , { Component }from 'react';
 
 const Destination = (props) => {
    console.log(props.destination)
+   if (props.destination.length > 0) {
     return(
         <div>
         <form >
@@ -15,12 +16,15 @@ const Destination = (props) => {
             </input>
             <button type="search">Search Destination</button>
         </form>
-       
-
+        {props.destination.map(destination => <li key={destination.id}>{destination.state} - {destination.city} - {destination.country}</li>)}
         </div>
     )}
-    Destination.getInitialProps = async () => {
-        console.log('get initialprops');
-    };
+    else {
+     return (
+   <div> Loading</div> 
+    )
+     }
+    }
+   
 
     export default Destination;

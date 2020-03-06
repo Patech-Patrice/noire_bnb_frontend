@@ -35,7 +35,7 @@ class App extends React.Component {
        
         <Router>
     
-       <DestinationsContainer destinations={this.props.destinations} />
+       <DestinationsContainer />
        <Route exact path='/' component={AttractionsContainer}/>
        <Route exact path='/' component={CommentsContainer}/>
        </Router>
