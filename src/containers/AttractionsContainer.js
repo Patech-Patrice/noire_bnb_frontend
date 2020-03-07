@@ -22,6 +22,7 @@ class AttractionsContainer extends React.Component {
                 <h1>Attractions will go here</h1>
                 <AttractionList />
                 <Attraction attraction={this.props.attraction} />
+
             </div>
              )}
              else {

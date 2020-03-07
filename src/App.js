@@ -1,7 +1,7 @@
 import React  from 'react';
 import DestinationsContainer from './containers/DestinationsContainer'
 import AttractionsContainer from './containers/AttractionsContainer'
-//import rootReducer from 'src/reducers/rootReducer.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import CommentsContainer from './containers/CommentsContainer'
 
 
@@ -31,14 +31,17 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-
-       
         <Router>
-    
        <DestinationsContainer />
        <Route exact path='/' component={AttractionsContainer}/>
        <Route exact path='/' component={CommentsContainer}/>
        </Router>
+       <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
       
     </div>
   );
