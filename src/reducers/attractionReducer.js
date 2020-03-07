@@ -1,4 +1,4 @@
-export default function attractionReducer(state = {attractions: []}, action) {
+export default function attractionReducer(state = {attraction: []}, action) {
     switch (action.type) {
         case "FETCH_ATTRACTIONS":
           return  action.payload
@@ -7,5 +7,6 @@ export default function attractionReducer(state = {attractions: []}, action) {
           return state
       }
     }
+
 
    

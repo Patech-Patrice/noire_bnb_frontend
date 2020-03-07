@@ -1,31 +1,36 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
-
-
 import DestinationsContainer from '../containers/DestinationsContainer'
 
-const Destination = (props) => {
+const DestinationCard = (props) => {
 
   console.log(props)
-  
-  //let destination = [];
+  //let destination = props.destination.filter(destination => destination.id == props.match.params.id)[0]
 
-  //console.log(destination)
+  console.log('hello')
+  
+  if (props.length > 0) {
   return (
 
     <div>
       <h2>
-        {destination ? destination.city : null} - {destination ? destination.state : null} - {destination ? destination.country : null}
+        
       </h2>
-      <DestinationsContainer destination={destination}/><br/>
+     
+     {props.destination}
       
     </div>
   )
-
+  }
+  else {
+    return (
+  <div> CANT LOAD CARD</div> 
+   )
+    }
 
 }
 
-export default Destination
+export default DestinationCard
 
 
  
