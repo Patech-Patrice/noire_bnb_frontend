@@ -5,6 +5,7 @@ import Destination from '../components/Destination.js';
 //import Destination from '../components/Destination.js';
 import DestinationList from '../components/DestinationList.js';
 import {Card} from 'react-bootstrap';
+
 class DestinationsContainer extends React.Component {
     constructor(props) {
         super(props);
@@ -17,14 +18,22 @@ class DestinationsContainer extends React.Component {
         
     }
     render() {
+
+      
+
+
+
         if (this.props.destination) {
         return (
             <div>
+
+     
                <Card>
                 <DestinationList  />
-             
                 <Destination destination ={this.props.destination} />
                 </Card>
+             
+
             </div>
              )}
              else {

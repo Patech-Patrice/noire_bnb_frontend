@@ -4,7 +4,8 @@ import AttractionsContainer from './containers/AttractionsContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CommentsContainer from './containers/CommentsContainer'
 import './index.css';
-//import './App.css'
+//import 'style.css';
+import './App.css'
 
 //router will live in this file
 import { BrowserRouter as Router, Route } from 'react-router-dom';

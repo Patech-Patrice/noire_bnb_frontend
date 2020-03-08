@@ -1,7 +1,9 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom'
-import AttractionCard from './AttractionCard'
+
 import {Card} from 'react-bootstrap';
+import Image from 'react-bootstrap/Image'
+import { Container, Row, Col } from 'react-grid-system';
 
 const Attraction = (props) => {
     console.log(props)
@@ -9,10 +11,10 @@ const Attraction = (props) => {
     return(
 
 
-
-        <Card className="bg-dark text-white" style={{ width: '18rem' }}>
        
-        <Card.Body>
+        <Card className="card" style={{ width: '18rem' }}>
+       
+      
         <div>
        
        {props.attraction.map(attraction =>
@@ -20,14 +22,14 @@ const Attraction = (props) => {
           <h3>{attraction.name} </h3>
           
           <Card.Subtitle >  {attraction.description}    </Card.Subtitle> 
-           <Card.Img src={attraction.url} alt="Card image"/>
+          <Image style={{height:'50%', width:'50%'}} resizeMode="contain" src={attraction.url}  alt="attraction" />
+
+         
         </li> )}
-      
-             
-            
+           
              
         </div>
-        </Card.Body>
+       
   </Card>
     )}
     else {
@@ -45,4 +47,16 @@ const Attraction = (props) => {
         
 
 
+     
+        
 
+
+            
+             
+       
+
+
+ 
+   
+
+    

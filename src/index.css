@@ -13,11 +13,42 @@ code {
 }
 
 img.card-img {
-  width: 250px;
-    height: 250px;
+  width: 10px;
+    height: 10px;
     margin: 20px;
     position: 'absoute';
 }
 .page {
   padding: 20px;
 }
+
+.card {
+  color: orangered;
+  position: 'vertical';
+}
+
+.card-text {
+  color: 'white';
+  position: 'horizontal';
+}
+
+.card-body {
+  color: '';
+  position: 'horizontal';
+}
+
+.card-title {
+  color: 'black';
+  position: 'horizontal';
+}
+
+.card-img-top {
+  color: '';
+  position: 'horizontal';
+}
+
+.container {
+  display: 'flex';
+  flex-direction: 'row';
+}
+  
