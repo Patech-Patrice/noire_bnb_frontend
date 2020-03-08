@@ -3,7 +3,8 @@ import DestinationsContainer from './containers/DestinationsContainer'
 import AttractionsContainer from './containers/AttractionsContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CommentsContainer from './containers/CommentsContainer'
-
+import './index.css';
+//import './App.css'
 
 //router will live in this file
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -31,9 +32,12 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
+      <div className="container">
         <Router>
-       <DestinationsContainer />
+      
+       <Route exact path='/' component={DestinationsContainer}/>
        <Route exact path='/' component={AttractionsContainer}/>
+
        <Route exact path='/' component={CommentsContainer}/>
        </Router>
        <link
@@ -42,7 +46,7 @@ class App extends React.Component {
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
   crossorigin="anonymous"
 />
-      
+     </div> 
     </div>
   );
 }

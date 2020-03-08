@@ -10,19 +10,21 @@ const Attraction = (props) => {
 
 
 
-        <Card>
+        <Card className="bg-dark text-white" style={{ width: '18rem' }}>
         <Card.Img variant="top" src={props.attraction.url} />
         <Card.Body>
         <div>
        
        {props.attraction.map(attraction =>
         <li key={attraction.id}>
-          {attraction.name} - {attraction.description} - {attraction.destination_id}
+          <h3>{attraction.name} </h3>
+          
+          <Card.Subtitle >  {attraction.description}    </Card.Subtitle> 
+           <Card.Img src={attraction.url} alt="Card image"/>
         </li> )}
         <div className="col s12">
           <div className="image">
-              image <img src={props.attraction.url}/>
-              {console.log(props.url)}
+             
               </div>
               </div>
              

@@ -1,0 +1,194 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(12px + 2vmin);
+    color: white;
+  }
+  #header-plz-work {
+    border: none;
+    border-color: white;
+    box-shadow: none;
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #navbar-header{
+    text-align: centered;
+  }
+  #user-top{
+    border: none;
+    border-color: white;
+    box-shadow: none;
+  }
+  #user-mid{
+    border: none;
+    border-color: white;
+    box-shadow: none;
+    bottom: auto;
+  }
+  #user-bottom{
+    border: none;
+    border-color: white;
+    box-shadow: none;
+  
+  }
+  /* inner div contains two but we want to grab the second, so therefore the 2nd nth div */
+  #user-top > div > div:nth-child(2){
+    margin-top: 14vh;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  
+  .app-header-div {
+    text-align: center;
+    margin-right: auto;
+    /* display: inline-block; */
+    border-style: none
+  }
+  /* id is hashtag */
+  
+  
+  .navbar-icons{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
+  }
+  .ui labeled icon menu{
+    display: flex;
+  }
+  #home-image{
+  margin-top: 20px;
+  display: inline-block;
+  width: “100%“;
+  height: “1000px”;
+  backgroundImage: url('https://181ge72mb8rnbx7z1k119thi-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Tetons-BANG2-web-e1476286636877.jpg');
+  backgroundPosition: ‘center’;
+  backgroundRepeat: ‘no-repeat’;
+  backgroundSize: ‘cover’;
+  }
+  
+  #search-box{
+      font-size: 20px;
+  }
+  body {
+    margin: 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    border: none;
+    font-size: 16px
+  }
+  
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 8em;
+    top: 30%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+  }
+  .home-p-tag {
+    font-size: 30px;
+    top: 38%;
+    left: 65%;
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 3em;
+    transform: translate(-50%, -50%);
+  }
+  #home-pg-button{
+    font-size: 20px;
+    font-size: 20px;
+    top: 42%;
+    left: 60%;
+    position: absolute;
+  }
+  .inner{
+    position: absolute;
+    color: white;
+    font-size: 5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #login-text {
+    font-size: 90px;
+    color: lightblue ;
+    text-shadow: 2px 2px 4px grey;
+  }
+  
+  .img-responsive {
+    width: 90em;
+    height: 40em;
+  }
+  .prof-pic{
+    border-radius: 50%;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  #header li{
+    list-style-type: none;
+  }
+  .card-body {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    font-size: 20px;
+    border-style: none;
+  
+  
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px lightblue
+  }
+  
+  .card-spacing {
+    display: inline-block;
+    margin: 50px;
+    padding: 20px;
+  }
+  .List-title{
+    font-size: 60px;
+    color: lightblue;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .forecast-table {
+    border: grey solid 1px;
+    border-spacing: 0.5rem;
+    border-collapse: collapse;
+    border-style: none;
+  }
+  td, th {
+    padding: 0.5rem;
+    font-size: 16px
+  }
