@@ -1,4 +1,4 @@
-export default (state = {comments: []}, action) => {
+export default (state = {comment: []}, action) => {
     switch (action.type) {
         case "FETCH_COMMENTS":
         return  action.payload

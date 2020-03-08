@@ -1,30 +1,39 @@
 import React from 'react';
-import Comments from '../components/Comments.js';
+import Comment from '../components/Comment.js';
 import CommentList from '../components/CommentList.js';
 import {connect} from 'react-redux';
 import {fetchComments} from '../actions/fetchComments';
 
 
 class CommentsContainer extends React.Component {
-
+    constructor(props) {
+        super(props);
+        //console.log(this.props)
+    }
     componentDidMount(){
         this.props.fetchComments()
     }
 
     render() {
+        if (this.props.comment) {
         return (
             <div>
                 <CommentList />
-                <Comments comments={this.props.comments} />
+                <Comment comment={this.props.comment} />
             </div>
-        )
+        )}
+        else {
+            return (
+          <div> Loading</div>    
+      )
     }
+}
 }
 
 
 const mapStateToProps = state => {
     return {
-      comments: state.comments
+      comment: state.comment
     }
   }
 

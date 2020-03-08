@@ -11,7 +11,7 @@ const Attraction = (props) => {
 
 
         <Card className="bg-dark text-white" style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={props.attraction.url} />
+       
         <Card.Body>
         <div>
        
@@ -22,11 +22,9 @@ const Attraction = (props) => {
           <Card.Subtitle >  {attraction.description}    </Card.Subtitle> 
            <Card.Img src={attraction.url} alt="Card image"/>
         </li> )}
-        <div className="col s12">
-          <div className="image">
+      
              
-              </div>
-              </div>
+            
              
         </div>
         </Card.Body>
