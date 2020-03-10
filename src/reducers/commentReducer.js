@@ -7,3 +7,6 @@ export default (state = {comment: []}, action) => {
           return state
       }
     }
+
+
+    //include ADD_COMMENT to actions

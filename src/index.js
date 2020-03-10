@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import destinationReducer from './reducers/destinationReducer.js';
 import attractionReducer from './reducers/attractionReducer.js';
 import commentReducer from './reducers/commentReducer.js';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -30,7 +30,9 @@ let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
 <Provider store={store}>
-<App />
+ <Router>
+  <App />
+ </Router>
 </Provider>
 , 
 document.getElementById('root'));

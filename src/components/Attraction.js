@@ -1,62 +1,31 @@
-import React from 'react';
-import {Route, Link} from 'react-router-dom'
+import React from 'react'
+import {Redirect} from 'react-router-dom'
+import DestinationsContainer from '../containers/DestinationsContainer'
 
-import {Card} from 'react-bootstrap';
-import Image from 'react-bootstrap/Image'
-import { Container, Row, Col } from 'react-grid-system';
+const AttractionCard = (props) => {
 
-const Attraction = (props) => {
-    console.log(props)
-   if (props.attraction.length > 0) {
-    return(
+  //console.log(props)
+  
+ 
+  return (
 
-
-       
-        <Card className="card" style={{ width: '18rem' }}>
-       
+    <div>
+      <h2>
+        
+      </h2>
+     ATTRACTIONS
       
-        <div>
-       
-       {props.attraction.map(attraction =>
-        <li key={attraction.id}>
-          <h3>{attraction.name} </h3>
-          
-          <Card.Subtitle >  {attraction.description}    </Card.Subtitle> 
-          <Image style={{height:'50%', width:'50%'}} resizeMode="contain" src={attraction.url}  alt="attraction" />
-
-         
-        </li> )}
-           
-             
-        </div>
-       
-  </Card>
-    )}
-    else {
-     return (
-   <div> Loading</div> 
-    )
-     }
-    }
-   
-
-    export default Attraction;
+    </div>
+  )
 
 
-     
-        
+}
 
-
-     
-        
-
-
-            
-             
-       
+export default AttractionCard
 
 
  
-   
 
-    
+  
+   
+  

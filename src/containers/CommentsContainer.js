@@ -1,6 +1,7 @@
 import React from 'react';
 import Comment from '../components/Comment.js';
-import CommentList from '../components/CommentList.js';
+import {Route, Switch} from 'react-router-dom';
+
 import {connect} from 'react-redux';
 import {fetchComments} from '../actions/fetchComments';
 
@@ -18,7 +19,7 @@ class CommentsContainer extends React.Component {
         if (this.props.comment) {
         return (
             <div>
-                <CommentList />
+                
                 <Comment comment={this.props.comment} />
             </div>
         )}

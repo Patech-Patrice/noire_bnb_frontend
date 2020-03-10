@@ -1,5 +1,6 @@
 import React  from 'react';
 import DestinationsContainer from './containers/DestinationsContainer'
+
 import AttractionsContainer from './containers/AttractionsContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CommentsContainer from './containers/CommentsContainer'
@@ -8,7 +9,7 @@ import './index.css';
 import './App.css'
 
 //router will live in this file
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 //navbar renders here
 
 
@@ -17,36 +18,33 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 class App extends React.Component {
  
   componentDidMount() {
-    //this.props.fetchDestinations({type: 'FETCH_DESTINATIONS', payload: {name: 'Destinations'}})
-    //fetch("http://localhost:3000/api/v1/destinations", {
-      // method: "GET",
-       //headers : { 
-        //'Content-Type': 'application/json',
-        //'Accept': 'application/json'
-      // }
-     //})
-     //.then(r => r.json())
-     //.then(data => console.log(data))
+   
 
   }
 
   render() {
   return (
     <div className="App">
-      <div className="container">
-        <Router>
-      
-       <Route exact path='/' component={DestinationsContainer}/>
-       <Route exact path='/' component={AttractionsContainer}/>
+      <div className="container"> 
+      <nav>
+        <ul>
+      <li><Link to="/destinations">Destinations</Link></li>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/attractions">Attractions</Link></li>
+      <li><Link to="/comments">Comments</Link></li>
+       <DestinationsContainer/>
 
-       <Route exact path='/' component={CommentsContainer}/>
-       </Router>
-       <link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous"
-/>
+       <Route path="/attractions">
+            <AttractionsContainer />
+          </Route>
+          <Route path="/comments">
+            <CommentsContainer />
+          </Route>
+       
+ 
+ 
+       </ul>
+        </nav> 
      </div> 
     </div>
   );

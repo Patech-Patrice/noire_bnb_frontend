@@ -14,3 +14,6 @@ export function fetchComments() {
      }))
     }
 }
+
+
+//include another request to POST comment

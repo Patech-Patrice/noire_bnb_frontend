@@ -1,5 +1,5 @@
 import React from 'react';
-import Attraction from '../components/Attraction.js';
+import Attractions from '../components/Attractions.js';
 import AttractionList from '../components/AttractionList.js';
 import {connect} from 'react-redux';
 import {fetchAttractions} from '../actions/fetchAttractions';
@@ -21,7 +21,7 @@ class AttractionsContainer extends React.Component {
             <div>
                 <h1>Attractions will go here</h1>
                 <AttractionList />
-                <Attraction attraction={this.props.attraction} />
+                <Attractions attraction={this.props.attraction} />
 
             </div>
              )}
