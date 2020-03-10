@@ -13,17 +13,22 @@ const Attraction = (props) => {
     if (attraction) {
       return(
          <div>
-              <img width={500} height={500} src={attraction.url}  />
+            
+              
+
+              
               <h1>{attraction ? attraction.name : null}</h1>
                <h3>{attraction ? attraction.description : null}</h3>
-               <div>
-               <h3><CommentsContainer attraction_id={attraction.id}/><br/></h3></div>
+               <img width={500} height={500} src={attraction.url}  />
 
-             </div>
+              <CommentsContainer attraction_id={attraction.id}/><br/></div>
+              
+
+            
       )
      }
      else {
-     return (<h1>Loading</h1>)
+     return (<h1></h1>)
      }
  }
     

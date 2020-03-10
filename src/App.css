@@ -105,10 +105,9 @@
     flex-direction: 'row';
   }
 
-  .list {
-    list-style: 'circle';
-    list-style-type: 'upper-roman';
-    list-style-position: outside;
+  .comment {
+    text-align: center;
+    display: flex;
   } 
   .row {
     display: flex;
