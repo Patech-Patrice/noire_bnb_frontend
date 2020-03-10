@@ -1,9 +1,9 @@
 import React from 'react';
-import Attractions from '../components/Attractions.js';
-import AttractionList from '../components/AttractionList.js';
 import {connect} from 'react-redux';
+import {Route, Switch} from 'react-router-dom';
 import {fetchAttractions} from '../actions/fetchAttractions';
-
+import Attractions from '../components/Attractions.js';
+import Attraction from '../components/Attraction.js';
 
 class AttractionsContainer extends React.Component {
     constructor(props) {
@@ -19,9 +19,11 @@ class AttractionsContainer extends React.Component {
         if (this.props.attraction) {
         return (
             <div>
-                <h1>Attractions will go here</h1>
-                <AttractionList />
-                <Attractions attraction={this.props.attraction} />
+               <Switch>
+                <Route path='/attractions/:id' render={(routerProps) => <Attraction {...routerProps} attraction={this.props.attraction}/>}/> 
+                <Route path='/attractions' render={(routerProps) => <Attractions {...routerProps} attraction={this.props.attraction}/>}/>
+              </Switch> 
+               
 
             </div>
              )}

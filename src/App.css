@@ -98,8 +98,43 @@
   .container {
     position: relative;
     text-align: center;
-    color: white;
+    color: black;
+    columns: 3;
+    padding: 10 6px;
+    display: '';
+    flex-direction: 'row';
   }
+
+  .list {
+    list-style: 'circle';
+    list-style-type: 'upper-roman';
+    list-style-position: outside;
+  } 
+  .row {
+    display: flex;
+   
+    padding: 0 4px;
+  }
+  .link-text {
+    color: 'red';
+    
+  }
+  .list {
+    position: relative;
+    
+    left: 10px;
+    right: 10px;
+    
+    padding-left: 34px;  
+    padding-right: 34px;  
+      
+  }
+  .column {
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  
   .centered {
     position: absolute;
     color: white;
@@ -197,26 +232,25 @@
     position: 'horizontal';
 }
 
-.container {
-  display: 'flex';
-  flex-direction: 'row';
-}
   
-  .card-title {
-    color: 'black';
-    position: 'horizontal';
-  }
   
-  .card-img-top {
+  
+  .image {
     color: '';
-    position: 'horizontal';
+    position: 'absolute';
+    padding: 0.3rem;
+    width: 15em;
+    height: 15em;
   }
 
   ul {
-    list-style: none;
+    list-style: 'circle';
+    
   }
   li {
     list-style-type: none;
     padding: 0;
   }
+
+  
   

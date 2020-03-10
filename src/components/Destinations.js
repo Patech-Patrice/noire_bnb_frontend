@@ -1,27 +1,26 @@
-import React , { Component }from 'react';
-import {Route, Link} from 'react-router-dom'
-
-
-import Image from 'react-bootstrap/Image'
-import { Container, Row, Col } from 'react-grid-system';
-import Button from 'react-bootstrap/Button';
-
+import React from 'react';
+import {Route, Link} from 'react-router-dom';
+import Image from 'react-bootstrap/Image';
 
 //props creates an object of all destinations to be passed in an argument
 //responsible for rendering a list of destinations
-import styles from 'react'
+
 
 const Destinations = (props) => {
    //console.log(props.destination)
    if (props.destination.length > 0) {
     return(
-      <Container>
-         {props.destination.map(destination =>
-        <ul key={destination.id}>
-         <Link to={`/destinations/${destination.id}`}>{destination.state} - {destination.country}- {destination.city}</Link>
-         <Image style={{height:'50%', width:'50%'}} src={destination.url}  alt="destination" />
-        </ul>  )}
-        </Container>
+      
+      <div>
+     {props.destination.map(destination =>
+        <ul className="list" key={destination.id}>
+         <Image width={50} height={50} className="image" src={destination.url}  alt="destination"  />
+        <Link to={`/destinations/${destination.id}`}><h4>{destination.city} - {destination.state}</h4></Link>
+        </ul> )}   
+       </div>
+    
+ 
+      
     )}
     else {
      return (
@@ -31,6 +30,16 @@ const Destinations = (props) => {
     }
   
     export default Destinations;
+
+
+  
+   
+      
+   
+  
+   
+
+
 
 
 

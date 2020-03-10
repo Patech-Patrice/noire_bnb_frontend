@@ -1,36 +1,21 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom'
-
-import {Card} from 'react-bootstrap';
 import Image from 'react-bootstrap/Image'
-import { Container, Row, Col } from 'react-grid-system';
+
 
 const Attractions = (props) => {
     //console.log(props)
    if (props.attraction.length > 0) {
-    return(
-
-
-       
-        <Card className="card" style={{ width: '18rem' }}>
-       
-      
+    return(      
         <div>
-       
        {props.attraction.map(attraction =>
-        <li key={attraction.id}>
-          <h3>{attraction.name} </h3>
-          
-          <Card.Subtitle >  {attraction.description}    </Card.Subtitle> 
-          <Image style={{height:'50%', width:'50%'}} src={attraction.url}  alt="attraction" />
-
-         
-        </li> )}
-           
-             
+        <ul className="list" key={attraction.id}>
+          <Image width={30}
+        height={30}
+        className="image" src={attraction.url}  alt="attraction" />
+           <Link className="link-text" to={`/attractions/${attraction.id}`}><h4>{attraction.name} </h4></Link>
+        </ul> )}
         </div>
-       
-  </Card>
     )}
     else {
      return (
@@ -41,6 +26,8 @@ const Attractions = (props) => {
    
 
     export default Attractions;
+
+    //be sure to include attraction description on indivdual attraction with comment.
 
 
      

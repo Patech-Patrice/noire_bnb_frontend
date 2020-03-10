@@ -1,16 +1,19 @@
-import React  from 'react';
+import React from 'react';
 import DestinationsContainer from './containers/DestinationsContainer'
-
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
 import AttractionsContainer from './containers/AttractionsContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CommentsContainer from './containers/CommentsContainer'
+import Home from './components/Home';
 import './index.css';
-//import 'style.css';
-import './App.css'
+import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-//router will live in this file
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-//navbar renders here
 
 
 
@@ -18,8 +21,6 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 class App extends React.Component {
  
   componentDidMount() {
-   
-
   }
 
   render() {
@@ -28,21 +29,30 @@ class App extends React.Component {
       <div className="container"> 
       <nav>
         <ul>
+<Navbar bg="light" expand="lg">
+<Navbar.Brand href="#home">Noire Bucket Destination</Navbar.Brand>
+<Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+<Nav className="mr-auto">
+  <li><Link to="/home">Home</Link></li>
       <li><Link to="/destinations">Destinations</Link></li>
-      <li><Link to="/">Home</Link></li>
       <li><Link to="/attractions">Attractions</Link></li>
       <li><Link to="/comments">Comments</Link></li>
-       <DestinationsContainer/>
-
-       <Route path="/attractions">
+      </Nav>
+     
+    
+      </Navbar>
+     
+         <Route path="/attractions">
             <AttractionsContainer />
           </Route>
+         <Route path="/destinations"><DestinationsContainer/></Route>
+          <Route path="/home">
+            <Home />
+            </Route>
           <Route path="/comments">
             <CommentsContainer />
           </Route>
-       
- 
- 
        </ul>
         </nav> 
      </div> 

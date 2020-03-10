@@ -5,7 +5,7 @@ import {fetchDestinations} from '../actions/fetchDestinations';
 import Destinations from '../components/Destinations.js';
 import Destination from '../components/Destination.js';
 
-import {Card} from 'react-bootstrap';
+
 
 class DestinationsContainer extends React.Component {
     constructor(props) {
@@ -21,9 +21,13 @@ class DestinationsContainer extends React.Component {
         if (this.props.destination) {
         return (
             <div>
+              <Switch>
+  <Route path='/destinations/:id' render={(routerProps) => <Destination {...routerProps} destination={this.props.destination}/>}/> 
            <Route path='/destinations' render={(routerProps) => <Destinations {...routerProps} destination={this.props.destination}/>}/>
-               <Route path='/destinations/:id' render={(routerProps) => <Destination {...routerProps} destination={this.props.destination}/>}/>   
+           </Switch>  
+                
             </div>
+
              )}
              else {
               return (
