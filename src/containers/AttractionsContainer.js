@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 import {fetchAttractions} from '../actions/fetchAttractions';
 import Attractions from '../components/Attractions.js';
 import Attraction from '../components/Attraction.js';
+import CommentInput from '../components/CommentInput'
 
 class AttractionsContainer extends React.Component {
     constructor(props) {
@@ -20,6 +21,7 @@ class AttractionsContainer extends React.Component {
         return (
             <div>
                <Switch>
+               <Route path='/comments/new' component={CommentInput}/>
                 <Route path='/attractions/:id' render={(routerProps) => <Attraction {...routerProps} attraction={this.props.attraction}/>}/> 
                 <Route path='/attractions' render={(routerProps) => <Attractions {...routerProps} attraction={this.props.attraction}/>}/>
               </Switch> 

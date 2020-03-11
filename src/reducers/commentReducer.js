@@ -3,6 +3,9 @@ export default (state = {comment: []}, action) => {
         case "FETCH_COMMENTS":
         return  action.payload
           //return state
+          case "ADD_COMMENT":
+            return  action.payload
+          //return state
         default:
           return state
       }

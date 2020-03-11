@@ -2,7 +2,8 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 import DestinationsContainer from '../containers/DestinationsContainer'
 import CommentsContainer from '../containers/CommentsContainer'
-
+import CommentInput from '/Users/patricedrayton/noire_bnb_frontend/src/components/CommentInput.js'
+//won't let me import CommentInput relative path keeps throwing error
 const Attraction = (props) => {
   //console.log(props)
   let attraction = props.attraction[props.match.params.id - 1]
@@ -13,15 +14,19 @@ const Attraction = (props) => {
     if (attraction) {
       return(
          <div>
-            
-              
 
-              
+
+     
+          <CommentInput/>
               <h1>{attraction ? attraction.name : null}</h1>
                <h3>{attraction ? attraction.description : null}</h3>
                <img width={500} height={500} src={attraction.url}  />
-
-              <CommentsContainer attraction_id={attraction.id}/><br/></div>
+              <CommentsContainer attraction_id={attraction.id}/><br/>
+              
+     
+              
+              
+              </div>
               
 
             

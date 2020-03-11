@@ -17,8 +17,8 @@ class CommentsContainer extends React.Component {
 
     render() {
         if (this.props.comment.length > 0) {
-            //{console.log(this.props.comment)}
-            let comment = this.props.comment.find(c => c.attraction_id = this.props.attraction_id)
+            {console.log(this.props.comment)}
+            let comment = this.props.comment.find(c => c.attraction_id === this.props.attraction_id)
             {console.log(comment)}
         return (
             <div>

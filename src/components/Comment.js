@@ -8,9 +8,8 @@ const Comment = (props) => {
      return(
         
          <div>
-        {props.comment.id} - 
+        {props.comment.id} 
          <li key={props.comment.id}>
-        
            <div > {props.comment.content} </div> 
          </li> 
          </div>
