@@ -9,10 +9,15 @@ class CommentInput extends React.Component {
       content: ''
     }
   
+    handleChange = (event) => {
+        this.setState({
+           [event.target.name]: event.target.value 
+        })
+    }
   
     handleSubmit = (event) => {
       event.preventDefault()
-      this.props.addComment(this.state)
+      this.props.addComment(this.state, this.props.attractionId)
       this.setState({
         content: ''
       })
@@ -23,7 +28,7 @@ class CommentInput extends React.Component {
         <div>
           <form onSubmit={this.handleSubmit}>
             <label>Comment: </label>
-            <input type='text' placeholder='enter comment' value={this.state.comment} name="name" onChange={this.handleChange}/><br/>
+            <input type='text' placeholder='enter comment' value={this.state.content} name="content" onChange={this.handleChange}/><br/><br/>
             <input type="submit" value="Submit"/>
           </form>
         </div>

@@ -4,7 +4,13 @@ export default (state = {comment: []}, action) => {
         return  action.payload
           //return state
           case "ADD_COMMENT":
-            return  action.payload
+            console.log(state)
+            return (
+              
+               [...state, action.payload]
+            
+               
+            )
           //return state
         default:
           return state
@@ -13,3 +19,4 @@ export default (state = {comment: []}, action) => {
 
 
     //include ADD_COMMENT to actions
+    //spread operator

@@ -7,15 +7,15 @@ const Attractions = (props) => {
     //console.log(props)
    if (props.attraction.length > 0) {
     return(      
-        <div>
+        <p>
        {props.attraction.map(attraction =>
-        <ul className="list" key={attraction.id}>
+        <div className="attraction" key={attraction.id}>
           <Image width={30}
         height={30}
         className="image" src={attraction.url}  alt="attraction" />
            <Link className="link-text" to={`/attractions/${attraction.id}`}><h4>{attraction.name} </h4></Link>
-        </ul> )}
-        </div>
+        </div> )}
+        </p>
     )}
     else {
      return (

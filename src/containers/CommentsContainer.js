@@ -12,18 +12,18 @@ class CommentsContainer extends React.Component {
         //console.log(this.props)
     }
     componentDidMount(){
-        this.props.fetchComments()
+        this.props.fetchComments(this.props.attractionId)
     }
 
     render() {
         if (this.props.comment.length > 0) {
             {console.log(this.props.comment)}
-            let comment = this.props.comment.find(c => c.attraction_id === this.props.attraction_id)
+            let comment = this.props.comment.filter(c => c.attraction_id === this.props.attractionId)
             {console.log(comment)}
         return (
-            <div>
-                
-                <Comment comment={comment}/>
+            <div className='comment'>
+                {comment.map(c => <Comment comment={c}/>)}
+                <Comment comment={comment}/><br/>
             </div>
         )}
         else {

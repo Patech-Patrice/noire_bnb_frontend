@@ -30,14 +30,14 @@ class App extends React.Component {
       <nav>
         <ul>
 <Navbar bg="light" expand="lg">
-<Navbar.Brand href="#home">Noire Bucket Destination</Navbar.Brand>
+<Navbar.Brand href="#home" className="navbar">NoireDestination</Navbar.Brand>
 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
 <Nav className="mr-auto">
   <li><Link to="/home">Home</Link></li>
       <li><Link to="/destinations">Destinations</Link></li>
       <li><Link to="/attractions">Attractions</Link></li>
-      <li><Link to="/comments">Comments</Link></li>
+     
       </Nav>
      
     
