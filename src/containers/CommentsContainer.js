@@ -1,25 +1,19 @@
 import React from 'react';
 import Comment from '../components/Comment.js';
-import {Route, Switch} from 'react-router-dom';
-//import CommentInput from '../components/CommentInput'
 import {connect} from 'react-redux';
 import {fetchComments} from '../actions/fetchComments';
 
 
 class CommentsContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        //console.log(this.props)
-    }
     componentDidMount(){
         this.props.fetchComments(this.props.attractionId)
     }
 
     render() {
         if (this.props.comment.length > 0) {
-            {console.log(this.props.comment)}
+            //{console.log(this.props.comment)}
             let comment = this.props.comment.filter(c => c.attraction_id === this.props.attractionId)
-            {console.log(comment)}
+            //{console.log(comment)}
         return (
             <div  className="comments-container "key={comment.id}>
                 {comment.map(c => <Comment comment={c}/>)}

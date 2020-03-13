@@ -7,11 +7,7 @@ import Attraction from '../components/Attraction.js';
 import CommentInput from '../components/CommentInput'
 
 class AttractionsContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        //console.log(this.props)
-    }
-
+    
     componentDidMount(){
         this.props.fetchAttractions()
     }
@@ -25,8 +21,6 @@ class AttractionsContainer extends React.Component {
                 <Route path='/attractions/:id' render={(routerProps) => <Attraction {...routerProps} attraction={this.props.attraction}/>}/> 
                 <Route path='/attractions' render={(routerProps) => <Attractions {...routerProps} attraction={this.props.attraction}/>}/>
               </Switch> 
-               
-
             </div>
              )}
              else {

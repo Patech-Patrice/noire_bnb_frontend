@@ -1,21 +1,19 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom'
-import Image from 'react-bootstrap/Image'
+import {Link} from 'react-router-dom'
+
 
 
 const Attractions = (props) => {
     //console.log(props)
    if (props.attraction.length > 0) {
     return(      
-        <p>
+      <div>
        {props.attraction.map(attraction =>
         <div className="attraction" key={attraction.id}>
-          <img width={400}
-        height={400}
-         src={attraction.url}  alt="attraction" />
+          <img width={400} height={400} src={attraction.url}  alt="attraction" />
            <Link className="link-text" to={`/attractions/${attraction.id}`}>{attraction.name} </Link>
         </div> )}
-        </p>
+      </div>
     )}
     else {
      return (
@@ -24,10 +22,9 @@ const Attractions = (props) => {
      }
     }
    
+export default Attractions;
 
-    export default Attractions;
-
-    //be sure to include attraction description on indivdual attraction with comment.
+   
 
 
      

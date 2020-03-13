@@ -5,13 +5,8 @@ import {fetchDestinations} from '../actions/fetchDestinations';
 import Destinations from '../components/Destinations.js';
 import Destination from '../components/Destination.js';
 
-
-
 class DestinationsContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        //console.log(this.props)
-    }
+   
     componentDidMount(){
         this.props.fetchDestinations();
         //console.log(this.props)
@@ -22,12 +17,10 @@ class DestinationsContainer extends React.Component {
         return (
             <div className="destinations-container">
               <Switch>
-  <Route path='/destinations/:id' render={(routerProps) => <Destination {...routerProps} destination={this.props.destination}/>}/> 
-           <Route path='/destinations' render={(routerProps) => <Destinations {...routerProps} destination={this.props.destination}/>}/>
-           </Switch>  
-                
+                <Route path='/destinations/:id' render={(routerProps) => <Destination {...routerProps} destination={this.props.destination}/>}/> 
+                <Route path='/destinations' render={(routerProps) => <Destinations {...routerProps} destination={this.props.destination}/>}/>
+           </Switch>    
             </div>
-
              )}
              else {
               return (
