@@ -15,9 +15,11 @@ const Destination = (props) => {
      return(
        
         <div>
+            <p>Destination WishList</p>
              <img width={500} height={500} src={destination.url}  />
              <h1>{destination ? destination.city : null} - {destination ? destination.state : null}</h1>
             </div>
+            
      )
     }
     else {

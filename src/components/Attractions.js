@@ -10,9 +10,9 @@ const Attractions = (props) => {
         <p>
        {props.attraction.map(attraction =>
         <div className="attraction" key={attraction.id}>
-          <Image width={100}
-        height={100}
-        className="img" src={attraction.url}  alt="attraction" />
+          <img width={400}
+        height={400}
+         src={attraction.url}  alt="attraction" />
            <Link className="link-text" to={`/attractions/${attraction.id}`}>{attraction.name} </Link>
         </div> )}
         </p>
