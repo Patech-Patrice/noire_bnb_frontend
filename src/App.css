@@ -130,14 +130,16 @@ font-size: 20px;
 font-weight: bolder;
 left: 300px;
 }
-  .comments-container {
-  
-    
-  
-    } 
- 
 
-  .new-comment{
+span{
+color: purple;
+position: relative;
+font-size: 20px;
+font-weight: bolder;
+left: 300px;
+}
+ 
+ .new-comment{
     display: flex;
     position: relative;
     position: inherit;
@@ -188,14 +190,25 @@ left: 300px;
     border: none;
     font-size: 30px
   }
+  .p1{
+    font-size: 50px;
+    font-weight: 800;
+    top: 300px;
+    bottom:
+  }
 
   h4 {
-    position: fixed;
-    left: 250px;
-    top: 750px;
-    width: 300px;
+    position: relative;
+    overflow-wrap: break-word;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.44444em;
     color: black;
-    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+    text-transform: capitalize;
+    left: 600px;
   }
 
   form {
@@ -210,6 +223,7 @@ left: 300px;
     margin: 0px;
     text-transform: capitalize;
     top: 300px;
+    left: 600px;
   }
 
   h3 {
@@ -220,7 +234,8 @@ left: 300px;
   h1 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     border: none;
-    font-size: 30px
+    font-size: 20px;
+    font-weight: bold;
   }
   h2 {
     position: absolute;
@@ -377,9 +392,9 @@ left: 300px;
 }
 
 .img {
-  height: 30px;
-  width: 30px;
-  max-width: 300%;
+  
+  background-position: right;
+  position: relative;
   
   
 }

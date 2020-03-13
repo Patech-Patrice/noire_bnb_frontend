@@ -25,7 +25,8 @@ class App extends React.Component {
 
   render() {
   return (
-    <div className="App">  
+    <div  className="App"
+    >  
 <Navbar bg="light" expand="lg">
 
 <Navbar.Toggle aria-controls="basic-navbar-nav" />

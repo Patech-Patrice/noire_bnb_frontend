@@ -12,7 +12,7 @@ const Comment = (props) => {
    
          
          <li key={props.comment.id}>
-           <h4> {props.comment.content} </h4> 
+           <h4> {props.comment.content} </h4> <br/>
          </li>
        
         

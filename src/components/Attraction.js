@@ -16,11 +16,11 @@ const Attraction = (props) => {
       return(
          
 
-        <h1>
+        <h1 style={{backgroundColor: "red"}}>
      <CommentInput attractionId={attraction.id}/>
-              <h2>{attraction ? attraction.name : null}</h2><br/>
-               <h6 >{attraction ? attraction.description : null}</h6><br/>
-               <img className='img' alt="attraction" src={attraction.url} className="align-right"/><br/><br/>
+             <p1>{attraction ? attraction.name : null}</p1><br/><br/>
+               <img width={500} height={500} className="img"  src={attraction.url} /><br/><br/>
+               {attraction ? attraction.description : null}<br/>
                <CommentsContainer attractionId={attraction.id}/><br/><br/>
                </h1>
       )
