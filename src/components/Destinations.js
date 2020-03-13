@@ -13,9 +13,9 @@ const Destinations = (props) => {
       
       <div>
      {props.destination.map(destination =>
-        <ul className="list" key={destination.id}>
+        <ul className="destinations" key={destination.id}>
          <Image width={50} height={50} className="image" src={destination.url}  alt="destination"  />
-        <Link to={`/destinations/${destination.id}`}><h4>{destination.city} - {destination.state}</h4></Link>
+        <Link to={`/destinations/${destination.id}`}>{destination.city} - {destination.state}</Link>
         </ul> )}   
        </div>
     
@@ -30,6 +30,8 @@ const Destinations = (props) => {
     }
   
     export default Destinations;
+
+    //style the destinations class in app.css
 
 
   

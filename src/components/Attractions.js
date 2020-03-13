@@ -10,10 +10,10 @@ const Attractions = (props) => {
         <p>
        {props.attraction.map(attraction =>
         <div className="attraction" key={attraction.id}>
-          <Image width={30}
-        height={30}
-        className="image" src={attraction.url}  alt="attraction" />
-           <Link className="link-text" to={`/attractions/${attraction.id}`}><h4>{attraction.name} </h4></Link>
+          <Image width={100}
+        height={100}
+        className="img" src={attraction.url}  alt="attraction" />
+           <Link className="link-text" to={`/attractions/${attraction.id}`}>{attraction.name} </Link>
         </div> )}
         </p>
     )}

@@ -109,13 +109,41 @@
   .comment {
     text-align: center;
     display: flex;
+    position: absolute;
+    left: 250px;
+    top: 325px;
+    width: 300px;
+    color: red;
+    font-weight: bold;
+
   } 
+  .home{
+    height: 100vh !important;
+    background-image: url('https://a0.muscache.com/4ea/air/r:w775-h518-sfit,e:fjpg-c80/pictures/0ffd8594-f123-43f0-85bb-7ef88c6f0624.jpg');
+    background-size: cover;
+}
+  .comments-container {
+  
+    
+  
+    } 
+ 
+
+  .new-comment{
+    display: flex;
+    position: relative;
+    position: inherit;
+  }
   .row {
     display: flex;
    
     padding: 0 4px;
   }
   .link-text {
+    color: 'red';
+    
+  }
+   a.link-text {
     color: 'red';
     
   }
@@ -142,9 +170,46 @@
     list-style-position: inside;
     width: 250px;
   }
-  
+  h6 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    border: none;
+    font-size: 30px
+  }
+  h5 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    border: none;
+    font-size: 30px
+  }
+
+  h4 {
+    position: fixed;
+    left: 250px;
+    top: 750px;
+    width: 300px;
+    color: black;
+    font-weight: bold;
+  }
+
+  form {
+    position: relative;
+    overflow-wrap: break-word;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.44444em;
+    color: black;
+    text-align: center;
+    margin: 0px;
+    text-transform: capitalize;
+    top: 300px;
+  }
 
   h3 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    border: none;
+    font-size: 30px
+  }
+  h1 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     border: none;
     font-size: 30px
@@ -177,7 +242,16 @@
     width: 250px;
    
   }
-
+  .attractions-container{
+    margin: 0px;
+    
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.125em;
+    color: #484848;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
 
  
   h6 {
@@ -295,12 +369,10 @@
 }
 
 .img {
+  height: 30px;
+  width: 30px;
+  max-width: 300%;
   
-  position: 'static';
-  margin: 300px 10px 10px 10px;
-  width: 100px;
-  height: 100px;
-  padding: 10px;
   
 }
 .img.align-right{

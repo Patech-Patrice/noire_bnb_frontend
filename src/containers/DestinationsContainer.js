@@ -20,7 +20,7 @@ class DestinationsContainer extends React.Component {
     render() {
         if (this.props.destination) {
         return (
-            <div>
+            <div className="destinations-container">
               <Switch>
   <Route path='/destinations/:id' render={(routerProps) => <Destination {...routerProps} destination={this.props.destination}/>}/> 
            <Route path='/destinations' render={(routerProps) => <Destinations {...routerProps} destination={this.props.destination}/>}/>

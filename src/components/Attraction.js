@@ -14,26 +14,15 @@ const Attraction = (props) => {
   
     if (attraction) {
       return(
-         <div>
+         
 
-
+        <h1>
      <CommentInput attractionId={attraction.id}/>
               <h2>{attraction ? attraction.name : null}</h2><br/>
-              
                <h6 >{attraction ? attraction.description : null}</h6><br/>
-              
                <img className='img' alt="attraction" src={attraction.url} className="align-right"/><br/><br/>
                <CommentsContainer attractionId={attraction.id}/><br/><br/>
-       
-              
-              
-     
-              
-              
-              </div>
-              
-
-            
+               </h1>
       )
      }
      else {

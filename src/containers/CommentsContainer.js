@@ -21,7 +21,7 @@ class CommentsContainer extends React.Component {
             let comment = this.props.comment.filter(c => c.attraction_id === this.props.attractionId)
             {console.log(comment)}
         return (
-            <div className='comment'>
+            <div  className="comments-container "key={comment.id}>
                 {comment.map(c => <Comment comment={c}/>)}
                 <Comment comment={comment}/><br/>
             </div>

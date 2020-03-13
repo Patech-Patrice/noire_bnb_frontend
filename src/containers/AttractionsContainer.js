@@ -19,7 +19,7 @@ class AttractionsContainer extends React.Component {
     render() {
         if (this.props.attraction) {
         return (
-            <div>
+            <div className="attractions-container">
                <Switch>
                <Route path='/comments/new' component={CommentInput}/>
                 <Route path='/attractions/:id' render={(routerProps) => <Attraction {...routerProps} attraction={this.props.attraction}/>}/> 

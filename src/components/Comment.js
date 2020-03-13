@@ -10,23 +10,13 @@ const Comment = (props) => {
    
      return(
    
-         <h3> 
-           
-            <ListGroup horizontal>
-          <ListGroup.Item className='list'>
          
          <li key={props.comment.id}>
-           <div > {props.comment.content} </div> 
+           <h4> {props.comment.content} </h4> 
          </li>
-         </ListGroup.Item>
-    </ListGroup>
-   
-         </h3>
        
-         
+        
      )
-     
-      
      }
 
 export default Comment

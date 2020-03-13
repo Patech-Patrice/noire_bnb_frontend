@@ -25,24 +25,16 @@ class App extends React.Component {
 
   render() {
   return (
-    <div className="App">
-      <div className="container"> 
-      <nav>
-        <ul>
+    <div className="App">  
 <Navbar bg="light" expand="lg">
-<Navbar.Brand href="#home" className="navbar">NoireDestination</Navbar.Brand>
-<Navbar.Toggle aria-controls="basic-navbar-nav" />
 
+<Navbar.Toggle aria-controls="basic-navbar-nav" />
 <Nav className="mr-auto">
   <li><Link to="/home">Home</Link></li>
       <li><Link to="/destinations">Destinations</Link></li>
       <li><Link to="/attractions">Attractions</Link></li>
-     
       </Nav>
-     
-    
       </Navbar>
-     
          <Route path="/attractions">
             <AttractionsContainer />
           </Route>
@@ -53,10 +45,8 @@ class App extends React.Component {
           <Route path="/comments">
             <CommentsContainer />
           </Route>
-       </ul>
-        </nav> 
      </div> 
-    </div>
+    
   );
 }
 }
