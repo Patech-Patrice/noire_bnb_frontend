@@ -13,28 +13,28 @@ class DestinationsContainer extends React.Component {
         
     }
     render() {
-        if (this.props.destination) {
-        return (
-            <div className="destinations-container">
-              <Switch>
-                <Route path='/destinations/:id' render={(routerProps) => <Destination {...routerProps} destination={this.props.destination}/>}/> 
-                <Route path='/destinations' render={(routerProps) => <Destinations {...routerProps} destination={this.props.destination}/>}/>
-           </Switch>    
-            </div>
-             )}
-             else {
-              return (
-            <div> Loading</div> 
-             )
-              }
-        }
+      if (this.props.destination) {
+      return (
+          <div className="destinations-container">
+            <Switch>
+              <Route path='/destinations/:id' render={(routerProps) => <Destination {...routerProps} destination={this.props.destination}/>}/> 
+              <Route path='/destinations' render={(routerProps) => <Destinations {...routerProps} destination={this.props.destination}/>}/>
+         </Switch>    
+          </div>
+           )}
+           else {
+            return (
+          <div> Loading</div> 
+           )
+            }
+      }
 
 }
 
 const mapStateToProps = state => {
-    return {
-      destination: state.destination 
-    }
+  return {
+    destination: state.destination 
   }
+}
 
 export default connect(mapStateToProps, {fetchDestinations})(DestinationsContainer)

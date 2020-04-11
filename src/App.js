@@ -8,12 +8,14 @@ import CommentsContainer from './containers/CommentsContainer'
 import Home from './components/Home';
 import './index.css';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
+
 
 class App extends React.Component {
-   
+     
   componentDidMount() {
   }
+
 
   render() {
   return (
@@ -27,7 +29,7 @@ class App extends React.Component {
           </Nav>
         </Navbar>
          <Route path="/attractions">
-            <AttractionsContainer />
+            <AttractionsContainer  />
           </Route>
            <Route path="/destinations">
              <DestinationsContainer/>
@@ -38,23 +40,13 @@ class App extends React.Component {
           <Route path="/comments">
             <CommentsContainer />
           </Route>
+          <Route path="/"><Redirect to="/home"></Redirect> </Route>
      </div> 
   );
 }
 }
 
-//lets you see what is in the redux store
-//const mapStateToProps = (state) => {
-  //return {
-    //destinations: state.destinations 
-  //}
-//}
 
-//lets you add to the redux store(can also use an action creator)
-//const mapDispatchToProps = (state) => {
-  //return {
-  //}
-//}
 
 export default App;
 

@@ -7,10 +7,6 @@ import destinationReducer from './reducers/destinationReducer.js';
 import attractionReducer from './reducers/attractionReducer.js';
 import commentReducer from './reducers/commentReducer.js';
 import { BrowserRouter as Router } from 'react-router-dom';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
 
 import App from './App';
 
@@ -21,11 +17,7 @@ const reducer = combineReducers({
     attraction: attractionReducer,
     comment: commentReducer
 })
-
-//set up our redux store, use rootReducer once there are multiple reducers created
-
 let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
-
 
 
 ReactDOM.render(
