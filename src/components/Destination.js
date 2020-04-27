@@ -3,11 +3,9 @@ import React from 'react'
 
 
 const Destination = (props) => {
-  //console.log(props)
+ 
   let destination = props.destination[props.match.params.id - 1]
- //console.log(props)
-  
-    console.log(destination)
+
     if (destination) {
       return(
         <h1 style={{backgroundColor: "red"}}>
