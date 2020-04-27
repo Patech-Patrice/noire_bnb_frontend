@@ -35,9 +35,7 @@ const increment = (index) => {
        <div>
          <button onClick={handleSort}>Sort</button>
         {attractions.map((attraction, index) =>
-         <div className="attraction" key={attraction.id}>
-           
-            
+         <div className="attraction" key={attraction.id}> 
             <img width={400} height={400} src={attraction.url}  alt="attraction" />
               <Link className="link-text" to={`/attractions/${attraction.id}`}>{attraction.name}</Link>
               <button id={index} onClick={()=>{increment(index)} } >Click to Vote </button> 
